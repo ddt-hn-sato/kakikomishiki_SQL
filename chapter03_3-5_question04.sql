@@ -17,11 +17,9 @@
  UPDATE
 	rental
 SET
-	rental_date = CURRENT_DATE() /* = が必要 */
+	returned = 9
 WHERE
-	user_id = 'B200405'
-  AND /* ORではなく */
-	isbn = '4-0010-0000-1'
+	rental_date <= '2012-03-31'
 ;
 
 /* 確認用クエリ */
