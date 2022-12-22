@@ -13,3 +13,14 @@
  * 修正者:
  * ver:1.0.0
  */
+
+UPDATE
+	books
+SET
+	publish = 'WINGS出版'
+WHERE
+	publish = '山田出版'
+;
+
+/* 確認用クエリ */
+SELECT * FROM books;
