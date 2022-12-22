@@ -13,3 +13,16 @@
  * 修正者:
  * ver:1.0.0
  */
+
+ UPDATE
+	rental
+SET
+	rental_date = CURRENT_DATE() /* = が必要 */
+WHERE
+	user_id = 'B200405'
+  AND /* ORではなく */
+	isbn = '4-0010-0000-1'
+;
+
+/* 確認用クエリ */
+SELECT * FROM rental;
