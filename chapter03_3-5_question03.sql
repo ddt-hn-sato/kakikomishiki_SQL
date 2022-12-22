@@ -13,3 +13,14 @@
  * 修正者:
  * ver:1.0.0
  */
+ 
+ UPDATE
+	books
+SET
+	price = price*0.9
+WHERE
+	publish = '日経BP'
+;
+
+/* 確認用クエリ */
+SELECT * FROM books;
