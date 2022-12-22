@@ -13,13 +13,15 @@
  * ver:1.0.0
  */
 
-DELETE FROM /* DELETE ではなく DELETE FROM */
-	books
+use MySQL;
+
+DELETE FROM
+	employee
 WHERE
-	category_id = 'Z9999'
-  OR /* AND ではなく OR */
-	category_id IS NULL
+	last_update <= '2007-03-31'
+  AND
+	retired = 1
 ;
 
 /* 確認用クエリ */
-SELECT * FROM books;
+SELECT * FROM employee;
